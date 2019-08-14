@@ -1,0 +1,32 @@
+<div class="container color-dark">
+
+    <div class="col">
+        <p>Search Box Demo</p>
+    </div>
+</div>
+<div class="container color-light">
+
+        <div class="col">
+            <p class="sm">Here is the magic, write in seach box.</p>
+            <form>
+                <input type="text" class="txt" name="searchText" placeholder="Search box"  [(ngModel)] = "searchText" (ngModelChange)="onChangeSearchTextBox()" >
+            </form>
+        </div>
+        <div class="col" *ngIf="showResult">
+            <!-- <p class="life-container" *ngFor="let row of rows;  let i = index">{{row}}</p> -->
+            <table>
+                <thead>
+                    <td class="life-container">Col1</td>
+                    <td class="life-container">Col2</td>
+                    <td class="life-container">Col3</td>
+                </thead>
+                <tbody>
+                   <tr  *ngFor="let row of rows;  let i = index">
+                       <td class="life-container">Row: {{i}},Col1</td>
+                       <td class="life-container">Row: {{i}},Col2</td>
+                       <td class="life-container">Row: {{i}},Col3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>  
+    </div>
