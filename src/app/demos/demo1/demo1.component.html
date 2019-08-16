@@ -6,12 +6,19 @@
 </div>
 <div class="container color-light">
 
-        <div class="col">
-            <p class="sm">Here is the magic, write in seach box.</p>
-            <form>
-                <input type="text" class="txt" name="searchText" placeholder="Search box"  [(ngModel)] = "searchText" (ngModelChange)="onChangeSearchTextBox()" >
-            </form>
-        </div>
+    <div class="col">
+        <p class="sm">Here is the magic, write in seach box.</p>
+        <form>
+            <input type="text" class="txt" name="searchText" placeholder="Search box"  [(ngModel)] = "searchText" (ngModelChange)="onChangeSearchTextBox()" >
+        </form>
+    </div>
+    <div class="col">
+        <p class="sm">Api calls selection</p>
+        <input type="radio"  name="x"  />
+        <label for="y">   One Api</label>
+        <input type="radio" name="x" />
+        <label for="z">Two Apis</label>
+    </div>
         <div class="col" *ngIf="showResult">
             <!-- <p class="life-container" *ngFor="let row of rows;  let i = index">{{row}}</p> -->
             <table>
@@ -22,9 +29,9 @@
                 </thead>
                 <tbody>
                    <tr  *ngFor="let row of rows;  let i = index">
-                       <td class="life-container">Row: {{i}},Col1</td>
-                       <td class="life-container">Row: {{i}},Col2</td>
-                       <td class="life-container">Row: {{i}},Col3</td>
+                       <td class="life-container">Row: {{i}},Col1 and Value is {{searchText}}</td>
+                       <td class="life-container">Row: {{i}},Col2 and Value is {{searchText}}</td>
+                       <td class="life-container">Row: {{i}},Col3 and Value is {{searchText}}</td>
                     </tr>
                 </tbody>
             </table>

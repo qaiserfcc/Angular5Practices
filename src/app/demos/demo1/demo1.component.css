@@ -1,9 +1,13 @@
 .container {
-    display: grid;
-    grid-template-columns: 50% auto;
+    display: list-item;
+    grid-template-columns: 100% auto;
 }
 .col {
     padding: 0.4em 1.3em;
+}
+.radiocol {
+    padding: 0.4em 1.3em;
+    display: inline-block;
 }
 .color-dark{
     background-color: #2885c4;
@@ -34,3 +38,4 @@ input.btn {
     font-weight: bold;
     cursor: pointer;
 }
+  
