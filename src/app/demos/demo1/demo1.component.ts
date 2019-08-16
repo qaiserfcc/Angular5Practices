@@ -6,7 +6,7 @@ import { DemoserviceService } from 'src/app/demoservice.service';
   styleUrls: ['./demo1.component.css']
 })
 export class Demo1Component implements OnInit {
-
+  apiCall :boolean = false;
   rows = [];
   searchText : string = "";
   showResult : boolean= false;

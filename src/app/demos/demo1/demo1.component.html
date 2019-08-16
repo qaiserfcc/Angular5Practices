@@ -14,10 +14,10 @@
     </div>
     <div class="col">
         <p class="sm">Api calls selection</p>
-        <input type="radio"  name="x" />
-        <label for="y">   One Api</label>
-        <input type="radio" name="x" />
-        <label for="z">Two Apis</label>
+        <input type="radio"  name="x" [value]="apiCall" [(ngModel)]="apiCall" />
+        <label >   One Api</label>
+        <input type="radio" name="x"  />
+        <label>Two Apis</label>
     </div>
         <div class="col" *ngIf="showResult">
             <!-- <p class="life-container" *ngFor="let row of rows;  let i = index">{{row}}</p> -->
