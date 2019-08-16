@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { Demo1Component } from './demos/demo1/demo1.component';
+import { DemoserviceService } from './demoservice.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,12 @@ import { Demo1Component } from './demos/demo1/demo1.component';
     Demo1Component
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DemoserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
